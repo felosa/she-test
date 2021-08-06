@@ -10,12 +10,10 @@ function Results(props: ResultsIProps) {
   return (
     <div className="results">
       <h1>Thank You!</h1>
-      <div>
-        <Score />
-        <Button onClick={() => props.navigate && props.navigate("/")}>
-          Start New Quiz
-        </Button>
-      </div>
+      <Score />
+      <Button onClick={() => props.navigate && props.navigate("/")}>
+        Start New Quiz
+      </Button>
     </div>
   );
 }

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 import { RouteComponentProps } from "@reach/router";
 import Button from "../../components/Button/Button";
 import { generateQuestions, clearPreviusQuiz } from "../../store/triviaActions";
+import { hasQuestions } from "../../store/selectors";
 
 interface TriviaIProps extends RouteComponentProps {}
 
@@ -11,16 +11,15 @@ function Trivia(props: TriviaIProps) {
   const dispatch = useDispatch();
 
   // Check if trivia data is downloaded to display Start Quiz button
-  const isTriviaData = useSelector(
-    (state: any) =>
-      (state.trivia.questions && state.trivia.questions.length > 0) || false
-  );
+  const isTriviaData = useSelector(hasQuestions);
 
-  // Clear previus answers
-  dispatch(clearPreviusQuiz());
+  useEffect(() => {
+    // Clear previus answers
+    dispatch(clearPreviusQuiz());
 
-  // Get trivia
-  dispatch(generateQuestions());
+    // Get trivia
+    dispatch(generateQuestions());
+  }, [dispatch]);
 
   return (
     <div>
