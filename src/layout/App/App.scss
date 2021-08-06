@@ -1,0 +1,44 @@
+@import "../../assets/styles/sass/utils";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $body-bg-color;
+  font-family: "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light",
+    "Helvetica Neue", Helvetica, "Segoe UI", Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: $font-color-dark;
+}
+
+p {
+  font-size: $base-font-size;
+  line-height: 1.5;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+
+  &__body {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    &-content {
+      max-width: 800px;
+    }
+  }
+}

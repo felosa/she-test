@@ -1,0 +1,18 @@
+@import "variables";
+
+@function rhythmScale($stepValue: 0) {
+  $result: $rhythm-value;
+  @return $stepValue * $result;
+}
+
+@function fontScale($stepValue: 0, $scaleVale: $font-scale) {
+  $result: $base-font-size;
+
+  @if $stepValue != 0 {
+    @for $_ from 1 through $stepValue {
+      $result: $result * $scaleVale;
+    }
+  }
+
+  @return $result;
+}
