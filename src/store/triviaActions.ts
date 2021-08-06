@@ -26,7 +26,7 @@ export const generateQuestions = () => {
   };
 };
 
-export const clearPreviusQuiz = () => {
+export const clearPreviousQuiz = () => {
   return (dispatch: any) => {
     dispatch({
       type: TRIVIA_GENERATE.CLEAR,

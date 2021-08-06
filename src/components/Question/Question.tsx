@@ -10,22 +10,24 @@ interface QuestionIProps extends RouteComponentProps {
 }
 
 function Question(props: QuestionIProps) {
+  const [answers, setAnswers] = useState<any[]>([]);
+
   const question = useSelector(getQuestion(props.questionIndex));
 
   const currentAnswer = useSelector(getCurrentAnswer(props.questionIndex));
 
   const dispatch = useDispatch();
 
-  const [answers, setAnswers] = useState<any>([]);
-
   useEffect(() => {
     // Add correct answer to incorrect answers at random position inside useEffect so the position of the answers doesn't change after selecting an answer
     const answersOptions = [...question.incorrect_answers];
+
     answersOptions.splice(
       Math.floor(Math.random() * question.incorrect_answers.length),
       0,
       question.correct_answer
     );
+
     setAnswers(answersOptions);
   }, [question]);
 

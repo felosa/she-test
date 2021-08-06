@@ -5,16 +5,19 @@ Quiz is a small application that is using a sample of questions to display list 
 ### You have been asked to:
 
 - Create new component that displays number of correct answers (for example 'You answered 5 out of 10 questions correctly.')
-  - add component to the Results page.
+  - [x] add component to the Results page.
   - write tests to ensure correct functionality.
 - Refactor the application code using clean coding principles to make the code maintainable.
 - Think about semantics and accessibility.
-- Style your work to fit the application.
-- Do not break the existing functionality.
+- [x] Style your work to fit the application.
+- [x] Do not break the existing functionality.
 - Propose changes to the application to make it production ready.
 
-* Clear answers for a new quiz.
-* Fix answers with random index(you can see they are changing order) after select one.
+## BUGS FIXED
+
+- [x] Clear answers for a new quiz.
+- [x] Fix answers with random index(you can see they are changing order) after select one option.
+- [x] Fix bug that allowed you to submit your quiz only responding to the last question(and array with empty elemnts is created, so we have to filter those empty elements before taking the length of the array to compare).
 
 Please only spend a reasonable amount of time on the task. If it does not get completed, we would
 like to know what your next steps would have been and how you would have accomplished them.

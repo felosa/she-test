@@ -5,9 +5,12 @@ export const getUserAnswers = (state: any) => state.trivia.answers;
 export const hasQuestions = (state: any) =>
   (state.trivia.questions && state.trivia.questions.length > 0) || false;
 
-export const isTriviaCompleted = (state: any) =>
-  state.trivia.answers.length === state.trivia.questions.length &&
-  !state.trivia.answers.includes(null);
+export const isTriviaCompleted = (state: any) => {
+  return (
+    state.trivia.answers.filter((a: any) => a).length ===
+      state.trivia.questions.length && !state.trivia.answers.includes(null)
+  );
+};
 
 export const getCurrentAnswer = (index: number) => (state: any) => {
   return state.trivia.answers[index];

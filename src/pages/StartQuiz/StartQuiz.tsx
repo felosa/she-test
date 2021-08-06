@@ -2,7 +2,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RouteComponentProps } from "@reach/router";
 import Button from "../../components/Button/Button";
-import { generateQuestions, clearPreviusQuiz } from "../../store/triviaActions";
+import {
+  generateQuestions,
+  clearPreviousQuiz,
+} from "../../store/triviaActions";
 import { hasQuestions } from "../../store/selectors";
 
 interface TriviaIProps extends RouteComponentProps {}
@@ -15,7 +18,7 @@ function Trivia(props: TriviaIProps) {
 
   useEffect(() => {
     // Clear previus answers
-    dispatch(clearPreviusQuiz());
+    dispatch(clearPreviousQuiz());
 
     // Get trivia
     dispatch(generateQuestions());
