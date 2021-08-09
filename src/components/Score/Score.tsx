@@ -12,7 +12,7 @@ interface QuizIProps extends RouteComponentProps {}
 function Score(props: QuizIProps) {
   const questions: [] = useSelector(getTrivialQuestions);
   const userAnswers: [] = useSelector(getUserAnswers);
-  console.log(userAnswers, "answers");
+
   // Compare answers with correct answer and take the length of corrects
   const result: number =
     questions.filter(
