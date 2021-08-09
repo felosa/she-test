@@ -6,6 +6,11 @@ I've completed all the tasks for this test. In addition to the main tasks, I add
 - [x] Fixed answers with random index after selecting one option. (Random order function was called after every render).
 - [x] Fixed bug that allowed you to submit your quiz when you had only answered the last question (an array with empty elements was created, so I added a filter that deletes empty elements before taking into account the length of the array).
 
+### Proposal:
+
+- Create component to store last scores.
+- Create tests for the rest of the app.
+
 ## Introduction
 
 Quiz is a small application that is using a sample of questions to display list of multiselect trivia questions. Users can start the quiz, answer trivia questions and complete the quiz when all questions are answered.
