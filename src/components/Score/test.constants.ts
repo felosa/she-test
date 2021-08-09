@@ -1,4 +1,4 @@
-export const questions = [
+export const QUESTIONS = [
   {
     category: "Science%3A%20Mathematics",
     type: "multiple",
