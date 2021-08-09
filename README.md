@@ -1,23 +1,25 @@
+## Notes
+
+I've completed all the tasks for this test. In addition to the main tasks, I added the following:
+
+- [x] Cleared answers for a new quiz. (After finishing a quiz, you could see your last test if you start a new one)
+- [x] Fixed answers with random index after selecting one option. (Random order function was called after every render).
+- [x] Fixed bug that allowed you to submit your quiz when you had only answered the last question (an array with empty elements was created, so I added a filter that deletes empty elements before taking into account the length of the array).
+
 ## Introduction
 
 Quiz is a small application that is using a sample of questions to display list of multiselect trivia questions. Users can start the quiz, answer trivia questions and complete the quiz when all questions are answered.
 
 ### You have been asked to:
 
-- Create new component that displays number of correct answers (for example 'You answered 5 out of 10 questions correctly.')
+- [x] Create new component that displays number of correct answers (for example 'You answered 5 out of 10 questions correctly.')
   - [x] add component to the Results page.
-  - write tests to ensure correct functionality.
-- Refactor the application code using clean coding principles to make the code maintainable.
-- Think about semantics and accessibility.
+  - [x] write tests to ensure correct functionality.
+- [x] Refactor the application code using clean coding principles to make the code maintainable.
+- [x] Think about semantics and accessibility.
 - [x] Style your work to fit the application.
 - [x] Do not break the existing functionality.
-- Propose changes to the application to make it production ready.
-
-## BUGS FIXED
-
-- [x] Clear answers for a new quiz.
-- [x] Fix answers with random index(you can see they are changing order) after select one option.
-- [x] Fix bug that allowed you to submit your quiz only responding to the last question(and array with empty elemnts is created, so we have to filter those empty elements before taking the length of the array to compare).
+- [x] Propose changes to the application to make it production ready.
 
 Please only spend a reasonable amount of time on the task. If it does not get completed, we would
 like to know what your next steps would have been and how you would have accomplished them.
