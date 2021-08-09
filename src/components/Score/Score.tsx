@@ -4,12 +4,15 @@ import { RouteComponentProps } from "@reach/router";
 import { getTrivialQuestions, getUserAnswers } from "../../store/selectors";
 import "./Score.scss";
 
+export const CORRECT_ANSWERS_DATA_TEST_ID = "correct-answers";
+export const TOTAL_QUESTIONS_DATA_TEST_ID = "total-questions";
+
 interface QuizIProps extends RouteComponentProps {}
 
 function Score(props: QuizIProps) {
   const questions: [] = useSelector(getTrivialQuestions);
   const userAnswers: [] = useSelector(getUserAnswers);
-
+  console.log(userAnswers, "answers");
   // Compare answers with correct answer and take the length of corrects
   const result: number =
     questions.filter(
@@ -17,11 +20,20 @@ function Score(props: QuizIProps) {
     ).length || 0;
 
   return (
-    <div className="score-container">
+    <div id="score" className="score-container">
       <h2>
         You answered{" "}
-        <span className={result >= 5 ? "passed" : "suspended"}>{result}</span>{" "}
-        out of <span>{questions.length}</span> questions correctly.
+        <span
+          data-testid={CORRECT_ANSWERS_DATA_TEST_ID}
+          className={result >= 5 ? "passed" : "suspended"}
+        >
+          {result}
+        </span>{" "}
+        out of{" "}
+        <span data-testid={TOTAL_QUESTIONS_DATA_TEST_ID}>
+          {questions.length}
+        </span>{" "}
+        questions correctly.
       </h2>
     </div>
   );

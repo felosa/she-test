@@ -1,27 +1,20 @@
 // test-utils.ts
-import React, { FC, ReactElement } from "react";
-import { render as rtlRender, RenderOptions } from "@testing-library/react";
+import React, { ReactElement } from "react";
+import { render as rtlRender } from "@testing-library/react";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import triviaReducer from "../../store/triviaReducer";
 
-// const initialState: TriviaReducerState = {
-//   loading: false,
-//   questions: [],
-//   error: null,
-//   answers: [],
-// };
-
 const customRender = (
   ui: ReactElement,
-  preloadedState: { answers: []; questions: [] },
+  preloadedState: {},
   store = configureStore({
     reducer: triviaReducer,
     preloadedState,
   }),
-  ...renderOptions: undefined[]
+  ...renderOptions: any
 ) => {
-  const Wrapper = ({ children }: any) => {
+  const Wrapper = ({ children }: any): ReactElement => {
     return <Provider store={store}>{children}</Provider>;
   };
 

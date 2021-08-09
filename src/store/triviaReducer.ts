@@ -7,7 +7,7 @@ export interface TriviaReducerState {
   answers: string[];
 }
 
-const initialState: TriviaReducerState = {
+export const initialState: TriviaReducerState = {
   loading: false,
   questions: [],
   error: null,
