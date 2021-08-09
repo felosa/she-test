@@ -10,7 +10,7 @@ import {
   questions,
 } from "./test.constants";
 
-test("Show 0 answers when we pass 0 answers and 0 questions", async () => {
+test("Show 0 correct answers and 0 questions", async () => {
   render(<Score />, {
     trivia: {
       questions: [],
