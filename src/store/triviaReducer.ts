@@ -1,6 +1,6 @@
 import { TRIVIA_GENERATE, QUESTION_ANSWER } from "./triviaActions";
 
-interface TriviaReducerState {
+export interface TriviaReducerState {
   loading: boolean;
   questions: any[];
   error: string | null;
